@@ -30,7 +30,7 @@ try:
           #n -= 1
           #time.sleep(5)
           print("Wait until we load the user interface!")
-          reqDict = {"LoginID": str(uuid.uuid4()), "MemberID": str(id), "LocationID": "LA-Gunn_CableLatPull-1", "UserName": text, "EfctvStartDt": datetime.utcnow().replace(tzinfo=$
+          reqDict = {"LoginID": str(uuid.uuid4()), "MemberID": str(id), "LocationID": "LA-Gunn_CableLatPull-1", "UserName": text, "EfctvStartDt": datetime.utcnow().replace(tzinfo=simple_utc()).isoformat()}
           headers = {'Content-Type': 'application/json'}
           url = 'http://192.168.1.178:3001/fitqueue-login-api/v1/create-login'
           print(jsn.dumps(reqDict))
